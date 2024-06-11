@@ -10,7 +10,7 @@ def bfs(graph, start):
             if neighbor not in visited:
                 visited.add(neighbor)
                 queue.append(neighbor)
-if _name_ == "_main_":
+if __name__ == "__main__":
     graph = {
         'A': ['B', 'C'],
         'B': ['A', 'D', 'E'],
@@ -21,3 +21,6 @@ if _name_ == "_main_":
     }
     print("BFS Traversal:")
     bfs(graph, 'A')
+
+BFS Traversal:
+A B C D E F 
