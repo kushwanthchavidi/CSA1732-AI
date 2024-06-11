@@ -7,7 +7,7 @@ def dfs(graph, start, visited=None):
         if neighbor not in visited:
             dfs(graph, neighbor, visited)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     graph = {
         'A': ['B', 'C'],
         'B': ['A', 'D', 'E'],
@@ -18,3 +18,5 @@ if _name_ == "_main_":
     }
     print("DFS Traversal:")
     dfs(graph, 'A')
+DFS Traversal:
+A B D E F C 
