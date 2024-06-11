@@ -4,7 +4,7 @@ n = 3
 row = [ 1, 0, -1, 0 ]
 col = [ 0, -1, 0, 1 ]
 class priorityQueue:
-	def _init_(self):
+	def __init__(self):
 		self.heap = []
 	def push(self, k):
 		heappush(self.heap, k)
@@ -16,14 +16,14 @@ class priorityQueue:
 		else:
 			return False
 class node:
-	def _init_(self, parent, mat, empty_tile_pos,
+	def __init__(self, parent, mat, empty_tile_pos,
 				cost, level):
 		self.parent = parent
 		self.mat = mat
 		self.empty_tile_pos = empty_tile_pos
 		self.cost = cost
 		self.level = level
-	def _lt_(self, nxt):
+	def __lt__(self, nxt):
 		return self.cost < nxt.cost
 def calculateCost(mat, final) -> int:
 	count = 0
@@ -94,3 +94,19 @@ final = [ [ 1, 2, 3 ],
 
 empty_tile_pos = [ 1, 2 ]
 solve(initial, empty_tile_pos, final)
+
+1  2  3  
+5  6  0  
+7  8  4  
+
+1  2  3  
+5  0  6  
+7  8  4  
+
+1  2  3  
+5  8  6  
+7  0  4  
+
+1  2  3  
+5  8  6  
+0  7  4  
