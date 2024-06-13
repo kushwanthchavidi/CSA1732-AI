@@ -4,3 +4,6 @@ sum(N, Result) :-
     Prev is N - 1,
     sum(Prev, PrevSum),
     Result is N + PrevSum.
+
+sum(3, Result)
+Result = 6.
